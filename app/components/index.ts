@@ -3,3 +3,4 @@ export * from "./Tours";
 export * from "./Main";
 export * from "./ProgrammTours";
 export * from "./Form";
+export * from "./ScrollButton";

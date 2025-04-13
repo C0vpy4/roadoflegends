@@ -88,7 +88,7 @@ export const Header: React.FC = () => {
             >
               <motion.li whileHover={{ scale: 1.1 }}>
                 <Link
-                  href="/"
+                  href="#main-section"
                   className="hover:text-[#6EFF3E] opacity-64 hover:opacity-100"
                 >
                   Главная
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }}>
                 <Link
-                  href="/about"
+                  href="#about-section"
                   className="hover:text-[#6EFF3E] opacity-64 hover:opacity-100"
                 >
                   О нас
@@ -104,7 +104,7 @@ export const Header: React.FC = () => {
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }}>
                 <Link
-                  href="/services"
+                  href="#programm-tours-section"
                   className="hover:text-[#6EFF3E] opacity-64 hover:opacity-100"
                 >
                   Программы
@@ -112,7 +112,7 @@ export const Header: React.FC = () => {
               </motion.li>
               <motion.li whileHover={{ scale: 1.1 }}>
                 <Link
-                  href="/contact"
+                  href="#form-section"
                   className="hover:text-[#6EFF3E] opacity-64 hover:opacity-100"
                 >
                   Обратная связь
@@ -129,7 +129,7 @@ export const Header: React.FC = () => {
             </motion.ul>
             <motion.div whileHover={{ scale: 1.1 }}>
               <button className="bg-[#6EFF3E] px-8 py-1 rounded-full bg-opacity-64 opacity-64 hover:opacity-100 duration-300">
-                Связаться
+                <Link href="#form-section">Связаться</Link>
               </button>
             </motion.div>
           </nav>
