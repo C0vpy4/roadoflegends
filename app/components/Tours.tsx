@@ -10,7 +10,7 @@ export const Tours = () => {
         <SameText text="Нам есть, что вам предложить, пожалуйста, выберите тур:" />
       </div>
 
-      <div className="w-full flex items-center justify-around gap-10">
+      <div className="w-full flex items-center justify-around gap-10 flex-wrap min-w-[500px]">
         <CardTour text="1" sameText="ТУР" imageSrc="/tour1.png" />
         <CardTour text="2" sameText="ТУР" imageSrc="/tour2.png" />
       </div>
