@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiChevronDown, FiChevronUp } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 
 export const ScrollButton = () => {
   const [mounted, setMounted] = useState(false);
@@ -79,11 +79,7 @@ export const ScrollButton = () => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      {currentSection === sections.length - 1 ? (
-        <FiChevronUp className="text-white text-2xl" />
-      ) : (
-        <FiChevronDown className="text-white text-2xl" />
-      )}
+      <FiChevronDown className="text-white text-2xl" />
     </motion.button>
   );
 };
