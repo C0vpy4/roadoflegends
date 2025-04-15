@@ -61,7 +61,7 @@ export const ScrollButton = () => {
     <motion.button
       onClick={scrollToNextSection}
       className="fixed bottom-10 right-10 z-50 
-                bg-white/20 backdrop-blur-sm rounded-full p-4 
+                bg-white/10 backdrop-blur-sm rounded-full p-3 md:p-4 lg:p-4
                 border border-white/30 hover:bg-white/30 transition-all
                 shadow-lg cursor-pointer"
       initial={{ opacity: 0 }}

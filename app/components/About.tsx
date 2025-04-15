@@ -7,12 +7,12 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <ComponentUI className="justify-start items-start px-20 py-10 gap-20 flex-col">
+    <ComponentUI className="justify-start items-start px-4 sm:px-8 md:px-12 lg:px-20 py-6 sm:py-8 md:py-10 gap-8 sm:gap-12 md:gap-16 lg:gap-20 flex-col">
       <TitleText text="О нас" />
 
-      <div className="flex gap-20">
+      <div className="flex flex-col md:flex-row gap-8 md:gap-10 lg:gap-20 w-full">
         <motion.div
-          className=""
+          className="w-full md:w-1/3"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -24,7 +24,7 @@ export const About = () => {
           />
         </motion.div>
         <motion.div
-          className=""
+          className="w-full md:w-1/3"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -36,7 +36,7 @@ export const About = () => {
           />
         </motion.div>
         <motion.div
-          className=""
+          className="w-full md:w-1/3"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.5 }}
@@ -49,7 +49,12 @@ export const About = () => {
         </motion.div>
       </div>
 
-      <Button text="Забронировать" className=" h-[36px] w-[220%]" />
+      <div className="w-full flex justify-center md:justify-start">
+        <Button
+          text="Забронировать"
+          className="h-[36px] w-[220px] sm:w-[250px] md:w-[280px] lg:w-[300px]"
+        />
+      </div>
     </ComponentUI>
   );
 };

@@ -191,39 +191,53 @@ export const Form = () => {
   }, [submitMessage]);
 
   return (
-    <ComponentUI className="w-full flex items-start justify-start flex-col p-20">
-      <TitleText text="Обратная связь" />
-      <SameText text="Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время" />
-      <div className="py-10 px-30 w-full flex items-center justify-center gap-10 flex-wrap">
-        <form onSubmit={handleSubmit} className="w-full flex flex-col gap-2">
+    <ComponentUI className="w-full flex items-start justify-start flex-col p-4 sm:p-8 md:p-12 lg:p-20">
+      <TitleText
+        text="Обратная связь"
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl mb-2 sm:mb-4"
+      />
+      <SameText
+        text="Оставьте ваши контактные данные, и мы свяжемся с вами в ближайшее время"
+        className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 sm:mb-6 md:mb-8"
+      />
+
+      <div className="w-full max-w-4xl mx-auto py-4 sm:py-6 md:py-8 lg:py-10">
+        <form
+          onSubmit={handleSubmit}
+          className="w-full flex flex-col gap-3 sm:gap-4"
+        >
           <div className="w-full">
             <input
               name="name"
               value={formData.name}
               onChange={handleChange}
               placeholder="ФИО"
-              className={`w-full h-10 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-xl font-light font-['Gilroy'] px-3 ${
+              className={`w-full h-10 sm:h-12 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-sm sm:text-base md:text-lg lg:text-xl font-light font-['Gilroy'] px-3 py-2 ${
                 errors.name ? "border border-red-500" : ""
               }`}
             />
             {errors.name && (
-              <div className="text-red-500 text-sm mt-1">{errors.name}</div>
+              <div className="text-red-500 text-xs sm:text-sm mt-1">
+                {errors.name}
+              </div>
             )}
           </div>
 
-          <div className="flex gap-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
             <div className="w-full">
               <input
                 name="people"
                 value={formData.people}
                 onChange={handleChange}
                 placeholder="Кол-во человек"
-                className={`w-full h-10 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-xl font-light font-['Gilroy'] px-3 ${
+                className={`w-full h-10 sm:h-12 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-sm sm:text-base md:text-lg lg:text-xl font-light font-['Gilroy'] px-3 py-2 ${
                   errors.people ? "border border-red-500" : ""
                 }`}
               />
               {errors.people && (
-                <div className="text-red-500 text-sm mt-1">{errors.people}</div>
+                <div className="text-red-500 text-xs sm:text-sm mt-1">
+                  {errors.people}
+                </div>
               )}
             </div>
 
@@ -232,7 +246,7 @@ export const Form = () => {
                 name="tour"
                 value={formData.tour}
                 onChange={handleChange}
-                className={`w-full h-10 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-xl font-light font-['Gilroy'] px-3 ${
+                className={`w-full h-10 sm:h-12 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-sm sm:text-base md:text-lg lg:text-xl font-light font-['Gilroy'] px-3 py-2 ${
                   errors.tour ? "border border-red-500" : ""
                 }`}
               >
@@ -244,7 +258,9 @@ export const Form = () => {
                 </option>
               </select>
               {errors.tour && (
-                <div className="text-red-500 text-sm mt-1">{errors.tour}</div>
+                <div className="text-red-500 text-xs sm:text-sm mt-1">
+                  {errors.tour}
+                </div>
               )}
             </div>
           </div>
@@ -260,12 +276,14 @@ export const Form = () => {
                 }
               }}
               placeholder="Номер телефона"
-              className={`w-full h-10 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-xl font-light font-['Gilroy'] px-3 ${
+              className={`w-full h-10 sm:h-12 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-sm sm:text-base md:text-lg lg:text-xl font-light font-['Gilroy'] px-3 py-2 ${
                 errors.phone ? "border border-red-500" : ""
               }`}
             />
             {errors.phone && (
-              <div className="text-red-500 text-sm mt-1">{errors.phone}</div>
+              <div className="text-red-500 text-xs sm:text-sm mt-1">
+                {errors.phone}
+              </div>
             )}
             <div className="text-white/50 text-xs mt-1">
               Формат: +7 (XXX) XXX XX-XX
@@ -278,7 +296,7 @@ export const Form = () => {
               value={formData.wishes}
               onChange={handleChange}
               placeholder="Ваши пожелания"
-              className="w-full h-10 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-xl font-light font-['Gilroy'] px-3 py-2"
+              className="w-full h-20 sm:h-24 md:h-28 bg-white/10 rounded-lg backdrop-blur-[1px] text-white text-sm sm:text-base md:text-lg lg:text-xl font-light font-['Gilroy'] px-3 py-2 resize-none"
             ></textarea>
           </div>
 
@@ -288,7 +306,7 @@ export const Form = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="mt-2 text-center"
+                className="mt-2 text-center text-sm sm:text-base"
                 style={{
                   color: submitMessage.includes("Спасибо")
                     ? "#4ade80"
@@ -299,12 +317,15 @@ export const Form = () => {
               </motion.div>
             )}
           </AnimatePresence>
-        </form>
 
-        <Button
-          text={isSubmitting ? "Отправка..." : "Отправить"}
-          onClick={() => handleSubmit()}
-        />
+          <div className="w-full flex justify-center mt-4 sm:mt-6">
+            <Button
+              text={isSubmitting ? "Отправка..." : "Отправить"}
+              onClick={() => handleSubmit()}
+              className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2 sm:py-3 text-sm sm:text-base md:text-lg"
+            />
+          </div>
+        </form>
       </div>
     </ComponentUI>
   );
