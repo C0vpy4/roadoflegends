@@ -3,7 +3,7 @@ import { SameText, TitleText } from "../shared";
 
 interface ProgrammProps {
   text: string;
-  about: any[];
+  about: { title: string; description: string }[];
 }
 
 export const ProgrammElement = ({ text, about }: ProgrammProps) => {
