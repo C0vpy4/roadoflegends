@@ -1,6 +1,6 @@
 import { About, Form, Main, ProgrammTours, Tours } from "./components";
 import { ScrollButton } from "./components";
-
+import { Analytics } from "@vercel/analytics/react";
 export default function Home() {
   return (
     <div className="min-h-fit flex items-center justify-center flex-col relative">
@@ -27,6 +27,7 @@ export default function Home() {
       <div id="form-section" className="w-full min-h-screen">
         <Form />
       </div>
+      <Analytics />
     </div>
   );
 }
