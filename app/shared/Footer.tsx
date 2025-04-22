@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  FaInstagram,
   FaTelegram,
   FaWhatsapp,
   FaVk,
@@ -22,20 +21,20 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col space-y-4">
             <h3 className="text-xl font-semibold mb-2">Контакты</h3>
             <motion.a
-              href="tel:+79999999999"
+              href="tel:+79660852751"
               className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               whileHover={{ x: 5 }}
             >
               <FaPhone className="text-[#6EFF3E]" />
-              <span>+7 (999) 999-99-99</span>
+              <span>+7 (966) 085-27-51</span>
             </motion.a>
             <motion.a
-              href="mailto:info@tropalegend.ru"
+              href="mailto:tropaLegend@mail.ru"
               className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               whileHover={{ x: 5 }}
             >
               <FaEnvelope className="text-[#6EFF3E]" />
-              <span>info@tropalegend.ru</span>
+              <span>tropaLegend@mail.ru</span>
             </motion.a>
           </div>
 
@@ -81,17 +80,17 @@ export const Footer: React.FC = () => {
             <h3 className="text-xl font-semibold mb-2">Социальные сети</h3>
             <div className="flex space-x-4">
               <motion.a
-                href="https://instagram.com"
+                href="https://vk.com/club230168832"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 className="bg-white/10 p-3 rounded-full hover:bg-[#6EFF3E]/20 transition-colors"
               >
-                <FaInstagram size={20} />
+                <FaVk size={20} />
               </motion.a>
               <motion.a
-                href="https://t.me"
+                href="https://t.me/tropalegend"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, scale: 1.1 }}
@@ -101,7 +100,7 @@ export const Footer: React.FC = () => {
                 <FaTelegram size={20} />
               </motion.a>
               <motion.a
-                href="https://wa.me/79999999999"
+                href="https://chat.whatsapp.com/DL2jJCdPuOoGcBsu7DDxCZ"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, scale: 1.1 }}
