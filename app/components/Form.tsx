@@ -143,11 +143,25 @@ export const Form = () => {
       );
       formDataToSend.append("subject", "Новая заявка на тур Тропа Легенд");
 
+      // Добавляем email получателя
+      formDataToSend.append("to_email", "tropalegend@mail.ru");
+
+      // Добавляем форматированное сообщение
+      const message = `
+Новая заявка на тур:
+ФИО: ${formData.name}
+Количество человек: ${formData.people}
+Тур: ${formData.tour}
+Телефон: ${formData.phone}
+Пожелания: ${formData.wishes || "Не указаны"}
+`;
+
+      formDataToSend.append("message", message);
+
       // Добавляем все поля формы
       Object.entries(formData).forEach(([key, value]) => {
         formDataToSend.append(key, value);
       });
-
       // Отправляем данные на сервис web3forms
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -176,7 +190,6 @@ export const Form = () => {
       setIsSubmitting(false);
     }
   };
-
   // Автоматически скрываем сообщение об отправке через 5 секунд
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
