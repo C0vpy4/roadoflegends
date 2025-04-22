@@ -29,12 +29,12 @@ export const Footer: React.FC = () => {
               <span>+7 (966) 085-27-51</span>
             </motion.a>
             <motion.a
-              href="mailto:tropaLegend@mail.ru"
+              href="mailto:tropalegend1@gmail.ru"
               className="flex items-center space-x-2 text-white/70 hover:text-white transition-colors"
               whileHover={{ x: 5 }}
             >
               <FaEnvelope className="text-[#6EFF3E]" />
-              <span>tropaLegend@mail.ru</span>
+              <span>tropalegend1@gmail.ru</span>
             </motion.a>
           </div>
 
