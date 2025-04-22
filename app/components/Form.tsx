@@ -139,7 +139,7 @@ export const Form = () => {
       const formDataToSend = new FormData();
       formDataToSend.append(
         "access_key",
-        "eeddb655-b666-49ad-b11b-4dc66499ef6d"
+        "f6a50432-0042-40ab-99f6-a9a8882d80a6" // Новый ключ доступа
       );
       formDataToSend.append("subject", "Новая заявка на тур Тропа Легенд");
 
@@ -162,6 +162,7 @@ export const Form = () => {
       Object.entries(formData).forEach(([key, value]) => {
         formDataToSend.append(key, value);
       });
+
       // Отправляем данные на сервис web3forms
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -169,6 +170,7 @@ export const Form = () => {
       });
 
       const data = await response.json();
+      console.log("Web3Forms response:", data); // Для отладки
 
       if (data.success) {
         setSubmitMessage("Спасибо! Ваша заявка отправлена.");
@@ -182,6 +184,7 @@ export const Form = () => {
         });
       } else {
         setSubmitMessage("Произошла ошибка при отправке формы.");
+        console.error("Form submission error:", data);
       }
     } catch (error) {
       setSubmitMessage("Произошла ошибка при отправке формы.");
@@ -189,8 +192,7 @@ export const Form = () => {
     } finally {
       setIsSubmitting(false);
     }
-  };
-  // Автоматически скрываем сообщение об отправке через 5 секунд
+  }; // Автоматически скрываем сообщение об отправке через 5 секунд
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined;
     if (submitMessage) {
