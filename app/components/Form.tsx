@@ -144,7 +144,7 @@ export const Form = () => {
       formDataToSend.append("subject", "Новая заявка на тур Тропа Легенд");
 
       // Добавляем email получателя
-      formDataToSend.append("to_email", "tropalegend1@gmail.ru");
+      formDataToSend.append("to_email", "tropalegend1@gmail.com");
 
       // Добавляем форматированное сообщение
       const message = `
